@@ -24,10 +24,10 @@ void Display::printTimeRange(string start, string end) {
             if((uTimemap["Hour"]>=hour) && (uTimemap["Minute"]>=minute) && (uTimemap["Second"]>=second) && (uTimemap["Millisecond"]>=millisecond))
             {
                 doParsing(end);
-            }
-            if((uTimemap["Hour"]<=hour) && (uTimemap["Minute"]<=minute) && (uTimemap["Second"]<=second) && (uTimemap["Millisecond"]<=millisecond))
-            {
-                print(index);//write print final print function
+                if((uTimemap["Hour"]<=hour) && (uTimemap["Minute"]<=minute) && (uTimemap["Second"]<=second) && (uTimemap["Millisecond"]<=millisecond))
+                {
+                    print(index);//write print final print function
+                }
             }
         }
     }

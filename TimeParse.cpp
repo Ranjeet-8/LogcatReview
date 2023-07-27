@@ -16,9 +16,9 @@ void TimeParse::doParsing(string input) {
             setMemberVariableValues(word,set_count);
             break;
         }
-        if(input[i] ==':'){
-            word = input.substr(startIndex,i-startIndex);
+        if(input[i] ==':') {
             startIndex=i+1;
+            word = input.substr(startIndex,i-startIndex);
             set_count++;  
             setMemberVariableValues(word,set_count);
         }
