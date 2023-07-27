@@ -19,7 +19,7 @@ void Display::printTimeRange(string start, string end) {
         doParsing(start);
         map<string,int> uTimemap;
         uTimemap = index.getTime();
-        if((uTimemap.contains("Hour")) && (uTimemap.contains("Minute")) && (uTimemap.contains("Second")) && (uTimemap.contains("Millisecond")))
+        if((uTimemap.count("Hour") > 0) && (uTimemap.count("Minute") > 0) && (uTimemap.count("Second") > 0) && (uTimemap.count("Millisecond") > 0))
         {
             if((uTimemap["Hour"]>=hour) && (uTimemap["Minute"]>=minute) && (uTimemap["Second"]>=second) && (uTimemap["Millisecond"]>=millisecond))
             {
