@@ -1,14 +1,12 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
-#include <vector>
-#include <string>
+#include <bits/stdc++.h>
 #include "LogLine.h"
 
 using namespace std;
 
-class Display
-{
+class Display {
     private:
     vector<LogLine> dataset;
     int hour, minute, second, millisecond;

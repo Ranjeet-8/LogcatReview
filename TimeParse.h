@@ -1,7 +1,7 @@
 #ifndef TIMEPARSE_H
 #define TIMEPARSE_H
 
-#include <string>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -21,5 +21,4 @@ public:
     int getSecond();
     int getMillisecond();
 };
-
 #endif

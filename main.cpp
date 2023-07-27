@@ -1,16 +1,15 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 #include "FileRead.h"
 #include "Display.h"
 
 using namespace std;
 
-int main(){
+int main() {
     string file_name;
     cout<<"Enter the File Name: "<<endl;
     cin>>file_name;
     int flag;
-    while(1){
+    while(1) {
         
         cout<<"--------------------------------------"<<endl;
         cout<<"|         Filters Available          |"<<endl;
@@ -23,27 +22,23 @@ int main(){
         file_object.readFile();
         vector<LogLine> dataset = file_object.getDataset();
 
-        if(flag==1){
-            string pid,vid;
+        if(flag == 1){
+            string pid, vid;
             cout<<"Enter the value of PID and VID: "<<endl;
             cin>>pid>>vid;
             Display pobj(dataset);
-            pobj.printPV(pid,vid);
+            pobj.printPV(pid, vid);
         }
-        else if(flag==2){
+        else if(flag == 2){
             string startTime, endTime;
             cout<<"Enter the value for start time and end time: "<<endl;
             cin>>startTime>>endTime;
             Display pobj(dataset);
-            pobj.printTimeRange(startTime,endTime);
+            pobj.printTimeRange(startTime, endTime);
         }
         else{
             cout<<"Enter valid flag value as mentioned"<<endl;
         }
-
-        return 0;
     }
-
-
     return 0;
 }

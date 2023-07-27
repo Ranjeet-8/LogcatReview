@@ -1,8 +1,7 @@
 #ifndef LOGLINE_H
 #define LOGLINE_H
 
-#include <string>
-#include <map>
+#include <bits/stdc++.h>
 #include "TimeParse.h"
 
 using namespace std;
@@ -22,7 +21,6 @@ public:
     void doParsing(string input);
     void setMemberVariableValues(string input, int sc);
 
-    // Getter methods for member variables
     string getDate();
     map<string, int> getTime();
     string getProcessId();
@@ -30,7 +28,4 @@ public:
     string getLogLevel();
     string getLogMessage();
 };
-
-
-
 #endif

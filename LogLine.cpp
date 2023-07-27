@@ -11,13 +11,21 @@ void LogLine::doParsing(string input) {
     int set_count = 0, startIndex = 0;
     string word;
     for (int i = 0; i < input.length(); i++) {
+        if(set_count == 5) {
+            word = input.substr(startIndex,(input.length()-1)-startIndex);
+            set_count++;
+            setMemberVariableValues(word, set_count);
+            break;
+        }
         if (input[i] == ' ') {
             word = input.substr(startIndex, i - startIndex);
-            startIndex = i + 1;
+            while(input[++i] == ' ');
+            startIndex = i;
             set_count++;
+            i--;
+            setMemberVariableValues(word, set_count);
         }
     }
-    setMemberVariableValues(word, set_count);
 }
 
 void LogLine::setMemberVariableValues(string input, int sc) {

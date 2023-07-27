@@ -1,15 +1,12 @@
 #ifndef FILEREAD_H
 #define FILEREAD_H
 
-#include <iostream>
-#include <fstream>
-#include <vector>
+#include <bits/stdc++.h>
 #include "LogLine.h"
 
 using namespace std;
 
-class FileRead
-{
+class FileRead {
 private:
     string file_Name;
     vector<LogLine> dataset;
@@ -21,7 +18,4 @@ public:
 
     vector<LogLine> getDataset();
 };
-
-
-
 #endif
