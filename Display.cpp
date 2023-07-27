@@ -48,7 +48,7 @@ void Display::doParsing(string input) {
             setMemberVariableValues(word,set_count);
             break;
         }
-        if(input[i] ==':'){
+        if((input[i] ==':') || (input[i] =='.')){
             word = input.substr(startIndex,i-startIndex);
             startIndex=i+1;
             set_count++;  
